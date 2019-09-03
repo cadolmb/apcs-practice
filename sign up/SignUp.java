@@ -30,7 +30,7 @@ public class SignUp {
     }
     // ADD USER IF USERNAME AND PASSWORD ARE VALID
     users.add(new User(inputUsername, inputPassword));
-    System.out.println("You have been signed up!");
+    System.out.println("\nYou have been signed up!");
     System.out.println("Here are all the existing users: \n");
     // LIST USERS
     for (int i = 0; i < users.size(); i++) {
@@ -56,7 +56,7 @@ public class SignUp {
     boolean startsWithVowel = false;
     char[] vowels = {'a', 'e', 'i', 'o', 'u'};
     for (int i = 0; i < vowels.length; i++) {
-      if (password.charAt(0) == vowels[i]) {
+      if (Character.toLowerCase(password.charAt(0)) == vowels[i]) {
         startsWithVowel = true;
       }
     }
