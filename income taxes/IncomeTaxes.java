@@ -19,28 +19,28 @@ public class IncomeTaxes {
     System.out.println(percentPaid + "% of " + userIncome);
   }
 
-  private static double calculateTaxes(double i) {
-    double t = 0;
-    double r = i;
+  private static double calculateTaxes(double income ) {
+    double tax = 0;
+    double remainder = income;
 
-    if (i > 105000) {
-      t += (r - 105000) * 0.22;
-      r = 105000;
+    if (income > 105000) {
+      tax += (remainder - 105000) * 0.22;
+      remainder = 105000;
     }
-    if (i > 65000) {
-      t += (r - 65000) * 0.19;
-      r = 65000;
+    if (income > 65000) {
+      tax += (remainder - 65000) * 0.19;
+      remainder = 65000;
     }
-    if (i > 35000) {
-      t += (r - 35000) * 0.16;
-      r = 35000;
+    if (income > 35000) {
+      tax += (remainder - 35000) * 0.16;
+      remainder = 35000;
     }
-    if (i > 15000) {
-      t += (r - 15000) * 0.10;
-      r = 15000;
+    if (income > 15000) {
+      tax += (remainder - 15000) * 0.10;
+      remainder = 15000;
     }
-    
-    return t;
+
+    return tax;
   }
 
 }
